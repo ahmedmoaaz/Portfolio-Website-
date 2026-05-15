@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moaaz Ahmed | AI Portfolio</title>
+    <script>
+      (() => {
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+
+        try {
+          document.documentElement.dataset.theme = localStorage.getItem("theme") || preferredTheme;
+        } catch {
+          document.documentElement.dataset.theme = preferredTheme;
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Moaaz Ahmed home">MA</a>
+      <div class="header-actions">
+        <nav class="site-nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="resume-download" href="assets/Moaaz-Ahmed-Resume.pdf" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13 3v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V3h2Zm-8 16h14v2H5v-2Z" />
+          </svg>
+          <span>Resume</span>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 18.5A6.5 6.5 0 1 1 12 5.5a6.5 6.5 0 0 1 0 13Zm0-2A4.5 4.5 0 1 0 12 7.5a4.5 4.5 0 0 0 0 9Zm1-14h-2V0h2v2.5Zm0 21.5h-2v-2.5h2V24ZM4.22 5.64 2.45 3.87l1.42-1.42 1.77 1.77-1.42 1.42Zm15.91 15.91-1.77-1.77 1.42-1.42 1.77 1.77-1.42 1.42ZM2.5 13H0v-2h2.5v2Zm21.5 0h-2.5v-2H24v2ZM3.87 21.55l-1.42-1.42 1.77-1.77 1.42 1.42-1.77 1.77ZM19.78 5.64l-1.42-1.42 1.77-1.77 1.42 1.42-1.77 1.77Z" />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.4 15.68A8.63 8.63 0 0 1 8.32 3.6a9.28 9.28 0 1 0 12.08 12.08ZM12 24A12 12 0 0 1 12 0c.74 0 1.46.07 2.16.2a1 1 0 0 1 .44 1.75 6.63 6.63 0 0 0 7.45 7.45 1 1 0 0 1 1.75.44c.13.7.2 1.42.2 2.16a12 12 0 0 1-12 12Z" />
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="equation-layer" aria-hidden="true">
+          <span class="formula f1">S<sup>2</sup> = &Sigma;(x - &mu;)<sup>2</sup> / n</span>
+          <span class="formula f2">&int; x<sup>2</sup>e<sup>ax</sup> dx = f(x)</span>
+          <span class="formula f3">&omega; = &radic;(k / m)</span>
+          <span class="formula f4">p(y|x) = softmax(Wx + b)</span>
+          <span class="formula f5">&nabla;L(&theta;) = &part;L / &part;&theta;</span>
+          <span class="formula f6">T = 2&pi; &radic;(l / g)</span>
+          <div class="diagram pyramid"></div>
+          <div class="diagram beam"></div>
+          <div class="diagram graph"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="availability">
+            <span></span>
+            Available for new projects
+          </div>
+          <h1 id="hero-title">Moaaz <span>Ahmed</span></h1>
+          <p class="handle">@moaazahmed</p>
+          <p class="hero-copy">
+            AI engineer building intelligent systems, Websites , Apps , Api 
+            to production . Turning Ideas into products. 
+          </p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button ghost" href="#contact">Get in Touch</a>
+            <a class="icon-link" href="https://github.com/ahmedmoaaz5072" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 .5A11.5 11.5 0 0 0 8.37 22.9c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.39-3.9-1.39-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.57-.29-5.27-1.28-5.27-5.71 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.47.11-3.07 0 0 .98-.31 3.2 1.19A11.1 11.1 0 0 1 12 6.05c.99 0 1.98.13 2.91.39 2.22-1.5 3.2-1.19 3.2-1.19.63 1.6.23 2.78.11 3.07.75.81 1.2 1.85 1.2 3.11 0 4.44-2.71 5.42-5.29 5.71.42.36.79 1.07.79 2.16v3.04c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z" />
+              </svg>
+            </a>
+            <a class="icon-link" href="https://x.com/ahmedmoaaz5072" aria-label="X profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.9 2h3.07l-6.7 7.66L23.14 22h-6.16l-4.82-6.3L6.64 22H3.56l7.17-8.2L3.18 2h6.31l4.36 5.76L18.9 2Zm-1.08 17.82h1.7L8.56 4.07H6.73l11.09 15.75Z" />
+              </svg>
+            </a>
+            <a class="icon-link" href="https://www.instagram.com/_moaaz17/" aria-label="Instagram profile">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.8 2h8.4A5.81 5.81 0 0 1 22 7.8v8.4a5.81 5.81 0 0 1-5.8 5.8H7.8A5.81 5.81 0 0 1 2 16.2V7.8A5.81 5.81 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm5-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-heading">
+          <p>About</p>
+          <h2>Builder at the edge of technology  and product. Building Robust and Scalable solutions to complex problems with modern technologies.</h2>
+        </div>
+        <div class="about-grid">
+          <p>
+            I design AI systems that are practical, measurable, and ready for real users.
+            My work blends model selection, retrieval, evaluation, automation, and clear
+            interfaces so teams can move from prototype to production with confidence.
+          </p>
+          <div class="stats">
+            <div><strong>24+</strong><span>AI prototypes</span></div>
+            <div><strong>8</strong><span>Production systems</span></div>
+            <!-- <div><strong>3 yrs</strong><span>experience</span></div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="section surface" id="projects">
+        <div class="section-heading">
+          <p>Projects</p>
+          
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <span>Web Development</span>
+            <h3>E-Commerce Platform </h3>
+            <p>A full-stack E-commerce solution built with modern web technologies.</p>
+          </article>
+          <article class="project-card">
+            <span>Artificial intelligence</span>
+            <h3>AI Resume Optimizer</h3>
+            <p> Built AI tool that tailors resumes to match job descriptions using NLP. Implemented real-time skill extraction and profile suggestions.</p>
+          </article>
+          <article class="project-card">
+            <span>Machine Learning</span>
+            <h3>Timeloop AI auto-journaling webapp</h3>
+            <p> It is a platform that auto-organizes user activity into timelines.CRUD operations with Add, Edit, Filter, and Search functionality.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="expertise-heading">
+          <p>Expertise</p>
+          <h2>Technical Expertise</h2>
+        </div>
+        <div class="skills-showcase">
+          <div class="tech-universe" aria-label="Rotating technology globe">
+            <div class="stars" aria-hidden="true"></div>
+            <div class="glow-dot" aria-hidden="true"></div>
+            <div class="rotating-globe" aria-hidden="true">
+              <div class="globe-core">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            
+            <span class="orbit-skill cyan" data-lat="22" data-lon="5">React</span>
+            <span class="orbit-skill white" data-lat="14" data-lon="42">Next.js</span>
+            <span class="orbit-skill orange" data-lat="34" data-lon="88">Jupyter</span>
+            <span class="orbit-skill red" data-lat="20" data-lon="128">Redis</span>
+            <span class="orbit-skill blue" data-lat="-4" data-lon="172">PostgreSQL</span>
+            <span class="orbit-skill yellow" data-lat="-28" data-lon="205">Hugging Face</span>
+            <span class="orbit-skill blue" data-lat="-45" data-lon="250">TypeScript</span>
+            <span class="orbit-skill orange" data-lat="-38" data-lon="302">Scikit-learn</span>
+            <span class="orbit-skill slate" data-lat="-10" data-lon="330">Pandas</span>
+            <span class="orbit-skill green" data-lat="6" data-lon="232">MongoDB</span>
+            <span class="orbit-skill teal" data-lat="35" data-lon="275">FastAPI</span>
+            <span class="orbit-skill blue" data-lat="44" data-lon="330">Docker</span>
+            <span class="orbit-skill slate" data-lat="48" data-lon="155">GitHub</span>
+            <span class="orbit-skill cyan" data-lat="-18" data-lon="68">Python</span>
+            <span class="orbit-skill cyan" data-lat="2" data-lon="312">NumPy</span>
+            <span class="orbit-skill red" data-lat="-52" data-lon="118">TensorFlow</span>
+            <span class="orbit-skill blue" data-lat="-33" data-lon="18">Tailwind CSS</span>
+            <span class="orbit-skill orange" data-lat="-58" data-lon="286">Git</span>
+            <span class="orbit-skill cyan" data-lat="50" data-lon="25">XGBoost</span>
+            <span class="orbit-skill white" data-lat="54" data-lon="220">Vercel</span>
+          </div>
+
+          <div class="skill-groups" aria-label="Detailed skills by category">
+            <article class="skill-group">
+              <h3>Languages</h3>
+              <div>
+                <span>Java</span>
+                <span>C++</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>C</span>
+              </div>
+            </article>
+            <article class="skill-group">
+              <h3>Frontend Technologies</h3>
+              <div>
+                <span>React.js</span>
+                <span>Next.js</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+                <span>Tailwind CSS</span>
+              </div>
+            </article>
+            <article class="skill-group">
+              <h3>Backend Technologies</h3>
+              <div>
+                <span>Java</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>RESTful APIs</span>
+                <span>EJS</span>
+                <span>OAuth</span>
+                <span>Prisma</span>
+              </div>
+            </article>
+            <article class="skill-group">
+              <h3>Databases</h3>
+              <div>
+                <span>PostgreSQL</span>
+                <span>MySQL</span>
+                <span>NoSQL</span>
+                <span>MongoDB</span>
+                <span>Redis</span>
+              </div>
+            </article>
+            <article class="skill-group">
+              <h3>Software Engineering</h3>
+              <div>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>System Design</span>
+                <span>CI/CD</span>
+                <span>Docker</span>
+                <span>Vercel</span>
+                <span>AWS</span>
+                <span>Kubernetes</span>
+              </div>
+            </article>
+            <article class="skill-group">
+              <h3>Modules & AI/Data</h3>
+              <div>
+                <span>NumPy</span>
+                <span>Pandas</span>
+                <span>Matplotlib</span>
+                <span>OpenCV</span>
+                <span>TensorFlow</span>
+                <span>Scikit-learn</span>
+                <span>Jupyter</span>
+                <span>LangChain</span>
+                <span>Hugging Face</span>
+                <span>Plotly</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section surface" id="experience">
+        <div class="section-heading">
+          <p>Experience</p>
+          <h2>Recent work.</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <time>2025 - Present</time>
+            <h3>AI Engineer</h3>
+            <p>Built LLM workflows, data pipelines, and evaluation suites for domain-specific AI products.</p>
+          </article>
+          <article>
+            <time>2023 - 2024</time>
+            <h3>Web Developer</h3>
+            <p>Delivered websites, internal automation tools, and deployment-ready APIs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="blog">
+        <div class="section-heading">
+          <p>Blog</p>
+          <h2>Notes from the lab.</h2>
+        </div>
+        <div class="blog-grid">
+          <a href="#">
+            <span>Evaluation</span>
+            <strong>What makes an LLM feature production-ready?</strong>
+          </a>
+          <a href="#">
+            <span>Vision</span>
+            <strong>Designing review loops for imperfect models</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="section-heading">
+          <p>Contact</p>
+          <h2>Let's build something sharp.</h2>
+        </div>
+        <a class="button primary" href="mailto:ahmedmoaaz1704@gmail.com">ahmedmoaaz1704@gmail.com</a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
